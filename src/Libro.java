@@ -6,7 +6,7 @@ public class Libro {
     private String genero;
     private boolean disponible;
 
-    // Constructor
+    //Constructor
     public Libro(String titulo, String autor, int anioPublicacion, String genero) {
         this.titulo = titulo;
         this.autor = autor;
