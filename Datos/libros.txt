@@ -1,0 +1,2 @@
+El principito;Allan poe;1997;magia;true
+libro prueba;nicolas maduro;2025;musical;true

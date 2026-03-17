@@ -1,6 +1,8 @@
+import Interface.Exportable;
+
 import java.util.ArrayList;
 
-public class Usuario {
+public class Usuario implements Exportable {
 
     private String nombre;
     private String idUsuario;
@@ -34,6 +36,11 @@ public class Usuario {
 
     public void devolverLibro(Libro libro) {
         librosPrestados.remove(libro);
+    }
+
+    @Override
+    public String aFormatoTexto() {
+        return idUsuario + ";" + nombre;
     }
 
     public void mostrarUsuario() {

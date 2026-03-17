@@ -1,4 +1,6 @@
-public class Libro {
+import Interface.Exportable;
+
+public class Libro implements Exportable {
 
     private String titulo;
     private String autor;
@@ -48,6 +50,11 @@ public class Libro {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public String aFormatoTexto() {
+        return titulo + ";" + autor + ";" + anioPublicacion + ";" + genero +";" + disponible ;
     }
 
     // devolver libro

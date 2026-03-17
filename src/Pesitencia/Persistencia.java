@@ -16,7 +16,7 @@ public class Persistencia {
         String carpeta = "Datos";
         if (filename != null && filename.isEmpty()){
             System.out.println("El nombre del archivo no puede estar vacio");
-        }else {
+        } else {
             this.fileName = filename;
         }
 
