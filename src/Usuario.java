@@ -4,16 +4,16 @@ public class Usuario {
 
     private String nombre;
     private String idUsuario;
-    private ArrayList<String> librosPrestados;
+    private ArrayList<Libro> librosPrestados;
 
-    //Constructor
+    // Constructor
     public Usuario(String nombre, String idUsuario) {
         this.nombre = nombre;
-        this.idUsuario= idUsuario;
+        this.idUsuario = idUsuario;
         this.librosPrestados = new ArrayList<>();
     }
 
-    //Getters
+    // Getters
     public String getNombre() {
         return nombre;
     }
@@ -22,40 +22,28 @@ public class Usuario {
         return idUsuario;
     }
 
-    public ArrayList<String> getLibrosPrestados() {
+    public ArrayList<Libro> getLibrosPrestados() {
         return librosPrestados;
     }
 
-    //Setters
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-    public void setIdUsuario(String idUsuario) {
-        this.idUsuario = idUsuario;
-    }
-    public void setLibrosPrestados(ArrayList<String> librosPrestados) {
-        this.librosPrestados = librosPrestados;
+    // Métodos
+
+    public void agregarLibroPrestado(Libro libro) {
+        librosPrestados.add(libro);
     }
 
-    //Metodo para prestar libro
-    public void agregarLibroPrestado(String tituloLibro) {
-        librosPrestados.add(tituloLibro);
+    public void devolverLibro(Libro libro) {
+        librosPrestados.remove(libro);
     }
 
-    // Metodo para devolver libro
-    public void devolverLibro(String tituloLibro) {
-        librosPrestados.remove(tituloLibro);
-    }
-
-    // Mostrar información del usuario
     public void mostrarUsuario() {
-        System.out.println("---Información del usuario--- ");
+        System.out.println("--- Información del usuario ---");
         System.out.println("Nombre: " + nombre);
         System.out.println("ID: " + idUsuario);
-        System.out.println("Libros prestados: " + librosPrestados);
+
+        System.out.println("Libros prestados:");
+        for (Libro libro : librosPrestados) {
+            System.out.println(libro.getTitulo());
+        }
     }
-
-
-
-
 }
