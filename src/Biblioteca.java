@@ -42,7 +42,7 @@ public class Biblioteca {
 
     public Usuario buscarUsuario(String id) {
         for (Usuario usuario : usuarios) {
-            if (usuario.getIdentificacion().equalsIgnoreCase(id)) {
+            if (usuario.getIdUsuario().equalsIgnoreCase(id)) {
                 return usuario;
             }
         }
@@ -100,7 +100,6 @@ public class Biblioteca {
 
 
     // FILTRAR POR GENERO
-   =
     public ArrayList<Libro> filtrarGenero(String genero) {
 
         ArrayList<Libro> resultado = new ArrayList<>();
