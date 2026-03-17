@@ -6,8 +6,11 @@ public interface Exportable {
     // un metodo que devuelva los campos de la clsae en formato string
 
     //Ejemplo
-//    public String aFormatoTexto() {
-//        // Formato CSV: "1,Harry Potter,J.K. Rowling"
-//        return this.id + "," + this.titulo + "," + this.autor;
-//    }
+    //    public String aFormatoTexto() {
+    //        // Formato CSV: "1,Harry Potter,J.K. Rowling"
+    //        return this.id + "," + this.titulo + "," + this.autor;
+    //    }
+
+
+    //comentario de prueba
 }
